@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ComDia+</title>
+    <link rel="icon" type="image/png" href="/images/artificial-intelligence.png">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/dropdown.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+          integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <script src="/lib/jquery.min.js"></script>
+    <script src="/lib/lodash.min.js"></script>
+    <script src="/lib/d3.min.js"></script>
+    <script src="/lib/d3-selection.min.js"></script>
+    <script src="/lib/d3-selection-multi.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div class="section title">
+        <div class="text">
+            <div class="title_component title_nn">ComDia+</div>
+            <div class="title_component title_desc">: Compare, Diagnosis and Improve Multi-class Classifiers</div>
+        </div>
+    </div>
+    <div class="visualization-zone">
+        <div class="main">
+            <div class="section model-ranking-view">
+                <svg id="model-ranking-vis"></svg>
+                <div class="dropdown__fixed-text">Sort by : </div>
+                <div class="dropdown">
+                    <a class="dropdown-title">
+                        <div class="title-text">recall</div>
+                        <div class="title-icon"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="submenu">
+                        <ul class="root">
+                            <li><a class="dropdown-item">name</a></li>
+                            <li><a class="dropdown-item">total accuracy</a></li>
+                            <li><a class="dropdown-item">recall</a></li>
+                            <li><a class="dropdown-item">precision</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section model-diagnosis-view">
+                <svg id="model-diagnosis-vis"></svg>
+            </div>
+        </div>
+        <div class="right">
+            <div class="section model-list-view">
+            </div>
+            <div class="section instance-analysis-view">
+                <svg id="representative-instance-vis"></svg>
+                <div class="scroll-area">
+                    <svg id="instance-list-vis"></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="javascripts/dropdown.js"></script>
+<script src="javascripts/Constant.js"></script>
+<script src="javascripts/Processor.js"></script>
+<script src="javascripts/Data.js"></script>
+<script src="javascripts/d3.model-ranking.js"></script>
+<script src="javascripts/d3.diagnosis.js"></script>
+<script src="javascripts/d3.instance-analysis.js"></script>
+<script>
+
+    console.log("Hello World!");
+</script>
+</html>

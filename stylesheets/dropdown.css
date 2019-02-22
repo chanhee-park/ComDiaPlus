@@ -1,0 +1,79 @@
+.dropdown__fixed-text {
+    position: absolute;
+    top: 10px;
+    right: 250px;
+    line-height: 30px;
+}
+
+.dropdown {
+    border: 1px #eee solid;
+    border-radius: 6px;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    width: 210px;
+    height: 30px;
+    color: #555;
+    text-align: left;
+}
+
+.dropdown a.dropdown-title {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+    line-height: 30px;
+    color: #555;
+    z-index: 110;
+    margin: auto;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropdown a.dropdown-title .title-text {
+    flex: 9;
+    float: left;
+    margin: 0 10px;
+}
+
+.dropdown a.dropdown-title .title-icon {
+    flex: 1;
+    float: right;
+}
+
+.submenu {
+    background: #fff;
+    position: absolute;
+    left: -10px;
+    z-index: 100;
+    width: 100%;
+    display: none;
+    margin-left: 10px;
+    padding: 35px 0 0 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+.dropdown li a {
+    color: #555555;
+    display: block;
+    font-family: arial, serif;
+    font-weight: bold;
+    padding: 6px 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background: #155FB0;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.root {
+    list-style: none;
+    margin: 0;
+    font-size: 16px;
+    padding: 11px 0 0 0;
+    border-top: 1px solid #dedede;
+}

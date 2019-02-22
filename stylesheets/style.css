@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    /*border: 1px solid #ccc;*/
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    background: #eee;
+}
+
+#app {
+    width: 1920px;
+    height: 1200px;
+    margin: auto;
+    background: #fff;
+    -webkit-box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.section {
+    width: 100%;
+    position: relative;
+    align-content: center;
+}
+
+/* Title */
+#app .title {
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding: 0 24px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+#app .title .text {
+    color: #939393;
+    font-size: 24px;
+    line-height: 70px;
+}
+
+#app .title .text .title_component {
+    display: inline-block;
+}
+
+#app .title .text .title_component.title_nn {
+    font-weight: 700;
+}
+
+#app .title .text .title_component.title_desc {
+    font-weight: 300;
+}
+
+/* Visualization Zone */
+#app .visualization-zone {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 70px);
+    padding: 6px;
+}
+
+#app .visualization-zone .main {
+    flex: 4;
+}
+
+#app .visualization-zone .left {
+    flex: 1;
+}
+
+/* Center Top - Ranking Zone */
+#app .visualization-zone .section.model-ranking-view {
+    height: 320px;
+}
+
+svg#model-ranking-vis {
+    width: 100%;
+    height: 100%;
+}
+
+/* Center Bottom - Matrix Zone */
+#app .visualization-zone .section.model-diagnosis-view {
+    height: calc(100% - 320px);
+}
+
+svg#model-diagnosis-vis {
+    width: 100%;
+    height: 100%;
+}
+
+/* Right Top - Model List Zone */
+#app .visualization-zone .section.model-list-view {
+    height: 320px;
+}
+
+/* Right Middle - Representative Instance Zone */
+#app .visualization-zone .section.instance-analysis-view {
+    height: calc(100% - 320px);
+}
+
+svg#representative-instance-vis {
+    width: 100%;
+    height: 400px;
+}
+
+/* Right Bottom - Instance List Zone */
+.section.instance-analysis-view .scroll-area {
+    width: calc(100% - 10px);
+    height: calc(100% - 410px);
+    overflow-y: scroll;
+}
+
+svg#instance-list-vis {
+    width: 100%;
+    height: 100%;
+}
