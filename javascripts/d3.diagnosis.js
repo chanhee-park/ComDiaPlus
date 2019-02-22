@@ -187,12 +187,9 @@ function modelDiagnosisVis() {
             return o['pred'] === predClass;
         });
         const sorted_instance = _.sortBy(real_pred_instance, function (o) {
-            return o['pred_proba'][predClass]
+            return -o['pred_proba'][predClass]
         });
         let maxInstanceIdx = DATA.MODELS_PREDICTION[that.model_name]['predict'].indexOf(sorted_instance[0]);
-        console.log();
-        console.log(realClass, predClass);
-        console.log(sorted_instance[0]);
 
         maxInstanceIdx = maxInstanceIdx % 1000 + 1;
         const dir = "./data/mnist_png_testing/" + realClass + '/';

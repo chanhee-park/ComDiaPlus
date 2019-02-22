@@ -102,10 +102,11 @@ function instanceAnalysisVis() {
             return o['pred'] === predClass;
         });
         const sorted_instance = _.sortBy(real_pred_instance, function (o) {
-            return o['pred_proba'][predClass]
+            return -o['pred_proba'][predClass]
         });
 
         for (let i = 0; i < 4; i++) {
+            console.log(sorted_instance[i]);
             let maxInstanceIdx = DATA.MODELS_PREDICTION[that.model_name]['predict'].indexOf(sorted_instance[i]);
             maxInstanceIdx = maxInstanceIdx % 1000 + 1;
             const dir = "./data/mnist_png_testing/" + realClass + '/';
@@ -115,7 +116,7 @@ function instanceAnalysisVis() {
                 .attrs({
                     "xlink:href": dir + filename,
                     x: i % 2 === 0 ? 10 : 20 + AVG_IMG_LEN / 2,
-                    y: i >= 2 ? 100 : 110 + AVG_IMG_LEN / 2,
+                    y: i < 2 ? 100 : 110 + AVG_IMG_LEN / 2,
                     width: AVG_IMG_LEN / 2,
                     height: AVG_IMG_LEN / 2,
                 })
